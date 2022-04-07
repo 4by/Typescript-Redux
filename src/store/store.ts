@@ -1,7 +1,8 @@
 import {combineReducers} from "redux";
 import {userReducer} from "./user/userReducer";
 import {todoReducer} from "./todo/todoReducer";
-
+import {applyMiddleware, createStore} from "redux";
+import thunk from "redux-thunk";
 
 export const rootReducer = combineReducers({
     user: userReducer,
@@ -9,3 +10,4 @@ export const rootReducer = combineReducers({
 })
 
 export type RootState = ReturnType<typeof rootReducer>
+export const store = createStore(rootReducer, applyMiddleware(thunk))
