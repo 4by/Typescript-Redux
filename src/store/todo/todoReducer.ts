@@ -1,4 +1,5 @@
-import {TodoAction, TodoActionTypes, TodoState} from "../../types/todo";
+import {TodoAction} from "./todoActions";
+import {TodoActionTypes, TodoState} from './todoConst'
 
 const initialState: TodoState = {
     todos: [],

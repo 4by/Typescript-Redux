@@ -1,6 +1,7 @@
 import {Dispatch} from "redux";
 import axios from "axios";
-import {TodoAction, TodoActionTypes} from "../../types/todo";
+import {TodoAction} from "../todo/todoActions";
+import {TodoActionTypes} from "../todo/todoConst"
 
 export const fetchTodos = (page = 1, limit = 10) => {
     return async (dispatch: Dispatch<TodoAction>) => {
