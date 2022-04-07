@@ -6,6 +6,9 @@ import thunk from "redux-thunk";
 import * as UserActionCreators from './user/userActCreat'
 import * as TodoActionCreators from './todo/todoActCreat'
 
+console.log(UserActionCreators)
+
+
 export const actionCreateCombine = {
     ...TodoActionCreators,
     ...UserActionCreators
