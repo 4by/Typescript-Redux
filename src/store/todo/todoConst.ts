@@ -6,7 +6,7 @@ export interface TodoState {
     limit: number;
 }
 
-export enum TodoActionTypes {
+export enum TODO_ACTION_TYPES {
     FETCH_TODOS = 'FETCH_TODOS',
     FETCH_TODOS_SUCCESS = 'FETCH_TODOS_SUCCESS',
     FETCH_TODOS_ERROR = 'FETCH_TODOS_ERROR',

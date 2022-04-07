@@ -1,5 +1,5 @@
 import {TodoAction} from "./todoActions";
-import {TodoActionTypes, TodoState} from './todoConst'
+import {TODO_ACTION_TYPES, TodoState} from './todoConst'
 
 const initialState: TodoState = {
     todos: [],
@@ -11,13 +11,13 @@ const initialState: TodoState = {
 
 export const todoReducer = (state = initialState, action: TodoAction): TodoState => {
     switch (action.type) {
-        case TodoActionTypes.FETCH_TODOS:
+        case TODO_ACTION_TYPES.FETCH_TODOS:
             return {...state, loading: true}
-        case TodoActionTypes.FETCH_TODOS_SUCCESS:
+        case TODO_ACTION_TYPES.FETCH_TODOS_SUCCESS:
             return {...state, loading: false, todos: action.payload}
-        case TodoActionTypes.FETCH_TODOS_ERROR:
+        case TODO_ACTION_TYPES.FETCH_TODOS_ERROR:
             return {...state, loading: false, error: action.payload}
-        case TodoActionTypes.SET_TODO_PAGE:
+        case TODO_ACTION_TYPES.SET_TODO_PAGE:
             return {...state, page: action.payload}
         default:
             return state

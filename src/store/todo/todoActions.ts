@@ -1,18 +1,18 @@
-import {TodoActionTypes} from './todoConst'
+import {TODO_ACTION_TYPES} from './todoConst'
 
 interface FetchTodoAction {
-    type: TodoActionTypes.FETCH_TODOS
+    type: TODO_ACTION_TYPES.FETCH_TODOS
 }
 interface FetchTodoSuccessAction {
-    type: TodoActionTypes.FETCH_TODOS_SUCCESS;
+    type: TODO_ACTION_TYPES.FETCH_TODOS_SUCCESS;
     payload: any[];
 }
 interface FetchTodoErrorAction {
-    type: TodoActionTypes.FETCH_TODOS_ERROR;
+    type: TODO_ACTION_TYPES.FETCH_TODOS_ERROR;
     payload: string;
 }
 interface SetTodoPage {
-    type: TodoActionTypes.SET_TODO_PAGE;
+    type: TODO_ACTION_TYPES.SET_TODO_PAGE;
     payload: number;
 }
 
