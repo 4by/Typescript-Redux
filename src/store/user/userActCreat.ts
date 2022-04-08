@@ -3,6 +3,8 @@ import { UserAction } from "./userActions";
 import { Dispatch } from "redux";
 import axios from "axios";
 
+//поскольку экшны были представлены как интерфейсы, а не как ф-и,
+//у нас нет ф-и, создающей экшн для диспатча, поэтому пишем его (как обьект) вручную
 export const fetchUsers = () => {
     return async (dispatch: Dispatch<UserAction>) => {
         try {

@@ -1,5 +1,8 @@
 import {USER_ACTION_TYPES} from './userConst'
 
+//экшны записываются через интерфейс, а не через ф-ю, создающую обьект, поскольку
+//интерфейс представляет собой тип, что удобно в тайпскрипт
+
 interface FetchUsersAction {
     type: USER_ACTION_TYPES.FETCH_USERS;
 }

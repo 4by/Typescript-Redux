@@ -13,8 +13,7 @@ export const rootReducer = combineReducers({
     todo: todoReducer
 })
 
+// операнд справа возвращает возвращаемый тип функции
 export type RootState = ReturnType<typeof rootReducer>
-
-// console.log(typeof rootReducer)
 
 export const store = createStore(rootReducer, applyMiddleware(thunk))
