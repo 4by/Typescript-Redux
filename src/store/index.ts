@@ -1,18 +1,12 @@
-import {combineReducers} from "redux";
-import {userReducer} from "./user/userReducer";
-import {todoReducer} from "./todo/todoReducer";
-import {applyMiddleware, createStore} from "redux";
+import { combineReducers } from "redux";
+import { userReducer } from "./user/userReducer";
+import { todoReducer } from "./todo/todoReducer";
+import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
-import * as UserActionCreators from './user/userActCreat'
-import * as TodoActionCreators from './todo/todoActCreat'
+import { fetchUsers } from './user/userActCreat'
+import { fetchTodos, setTodoPage } from './todo/todoActCreat'
 
-console.log(UserActionCreators)
-
-
-export const actionCreateCombine = {
-    ...TodoActionCreators,
-    ...UserActionCreators
-}
+export const actionCreateCombine = { fetchTodos, setTodoPage, fetchUsers }
 
 export const rootReducer = combineReducers({
     user: userReducer,
@@ -20,4 +14,7 @@ export const rootReducer = combineReducers({
 })
 
 export type RootState = ReturnType<typeof rootReducer>
+
+// console.log(typeof rootReducer)
+
 export const store = createStore(rootReducer, applyMiddleware(thunk))
