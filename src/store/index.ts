@@ -13,6 +13,8 @@ export const rootReducer = combineReducers({
     todo: todoReducer
 })
 
+console.log(rootReducer)
+
 // операнд справа возвращает возвращаемый тип функции
 export type RootState = ReturnType<typeof rootReducer>
 
